@@ -1,4 +1,4 @@
-local allIter(t)
+local function allIter(t)
     local one = ipairs(t)
     local two = pairs(t)
     local first = true
@@ -36,7 +36,7 @@ local function sCopy(t1, t2, found)
     return textCopy
 end
 
-local function copy(t1, t2)
+function copy(t1, t2)
     local gTextCopy = {}
     while true do
         if not gTextCopy[1] then break end
